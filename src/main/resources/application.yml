@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: spring-boot-template
+
+  docker:
+    compose:
+      enabled: true
