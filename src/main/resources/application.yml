@@ -5,3 +5,40 @@ spring:
   docker:
     compose:
       enabled: true
+  jpa:
+    show-sql: false
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: false
+        use_sql_comments: false
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types:
+      - "text/html"
+      - "text/xml"
+      - "text/plain"
+      - "text/css"
+      - "text/javascript"
+      - "application/javascript"
+      - "application/json"
+      - "application/xml"
+    min-response-size: 2KB
+
+sbtemplateapp:
+  openapi:
+    name: "Spring Boot Template Title"
+    version: ${OPENAPI_APP_VERSION:1.0.0}
+    description: "Spring Boot Template"
+    contact:
+      name: Filip VE
+      mail: ${OPENAPI_CONTACT_MAIL:filipve@email.com}
+      url: ${OPENAPI_CONTACT_URL:https://filipve.com}
+    license:
+      url: ${OPENAPI_APP_LICENSE_URL:https://www.apache.org/licenses/LICENSE-2.0.html}
+      name: ${OPENAPI_APP_LICENSE:Apache 2.0}
